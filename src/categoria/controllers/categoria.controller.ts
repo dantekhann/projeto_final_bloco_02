@@ -10,13 +10,14 @@ import {
   ParseIntPipe,
   Post,
   Put,
-  UseGuards,
 } from '@nestjs/common';
 
 import { Categoria } from '../entities/Categoria.entity';
 import { CategoriaService } from '../services/categoria.services';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('/categorias')
+@ApiTags('Categoria')
+@Controller("/categorias")
 export class CategoriaController {
   constructor(private readonly CategoriaService: CategoriaService) {}
 

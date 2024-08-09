@@ -14,8 +14,10 @@ import {
 } from '@nestjs/common';
 import { Produto } from '../entities/produto.entity';
 import { ProdutoService } from '../services/produto.services';
+import { ApiTags } from '@nestjs/swagger';
 
-@Controller('/produtos')
+@ApiTags('Produto')
+@Controller("/produtos")
 export class ProdutoController {
   constructor(private readonly ProdutoService: ProdutoService) {}
 
